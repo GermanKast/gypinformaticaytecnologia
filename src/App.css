@@ -1,3 +1,13 @@
+/*
+@font-face {
+  font-family: 'Museo';
+  src: url('../fonts/museo300-regular-webfont.woff2') format('woff2'),
+    url('../fonts/museo300-regular-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: 300;
+}
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +17,7 @@ html, body{
   background-image: url("./imgs/fondo-gyp-lc.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .App{
@@ -14,6 +25,24 @@ html, body{
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding-top: 15px;
+}
 
+.container{
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.welcome{
+  height: 200px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: larger;
+  background-color: rgba(1, 6, 82, 0.9);
+}
+
+.welcome > *{
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
