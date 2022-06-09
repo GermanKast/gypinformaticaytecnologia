@@ -1,0 +1,87 @@
+/*************************************************************************************************
+ * Hoja de estilos para el componente Section-card
+ *************************************************************************************************/
+
+.background-blue-solid{ background-color:rgb(1, 6, 82);}
+.background-violet-solid{ background-color:rgb(111, 2, 63);}
+.background-blue-trans{ background-color:rgba(1, 6, 82, 0.7);}
+.background-violet-trans{ background-color:rgba(111, 2, 63, 0.7);}
+
+.section-card-wrap-invert{ 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.section-card-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.section-card-img, .section-card-text{
+    width: 50%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: Avenir, sans-serif, Arial;
+    color: white;
+}
+
+.section-card-text > h3{
+    font-family: Peaches-and-cream, sans-serif, Arial;
+    font-weight: 100;
+    font-size: 5.5em;
+    line-height: 70px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.section-card-text > h4{
+    font-size: 22px;
+}
+
+.section-card-text > p{
+    width: 400px;
+    margin: 0 auto;
+    font-size: 22px;
+    text-align: justify;
+    padding-bottom: 20px;
+}
+
+.section-card-img{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding: 0;
+    text-align: center;
+}
+
+.section-card-img > img{
+    width: 90%;
+}
+
+
+@media all and (max-width: 960px){
+    .section-card-wrap{ flex-direction: column;}
+    .section-card-img{ width: 100%; padding: 0; text-align: center;}
+    .section-card-img > img{ width: 60%;}
+    .section-card-text{ width: 100%; padding-bottom: 15px;}
+    .section-card-text > p{ width: 85%;}
+}
+
+@media all and (max-width: 550px){
+    .section-card-text > h3{ font-size: 4.5em;}
+}

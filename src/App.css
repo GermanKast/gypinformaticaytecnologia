@@ -1,19 +1,33 @@
-/*
+
 @font-face {
-  font-family: 'Museo';
-  src: url('../fonts/museo300-regular-webfont.woff2') format('woff2'),
-    url('../fonts/museo300-regular-webfont.woff') format('woff');
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins-Bold-700.woff') format('woff');
   font-style: normal;
-  font-weight: 300;
+  font-weight: 700;
 }
-*/
+
+@font-face {
+  font-family: 'Peaches-and-cream';
+  src: url('./fonts/Peaches-and-Cream-Regular.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('./fonts/Avenir-light.woff') format('woff');
+  font-style: normal;
+  font-weight: 200;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html, body{
+  min-width: 320px;
   background-image: url("./imgs/fondo-gyp-lc.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -36,13 +50,46 @@ html, body{
 }
 
 .welcome{
-  height: 200px;
-  font-family: Helvetica, Arial, sans-serif;
+  height: 190px;
+  font-family: Poppins, Helvetica, Arial, sans-serif;
   font-size: larger;
   background-color: rgba(1, 6, 82, 0.9);
 }
 
-.welcome > *{
+.welcome > * {
   padding-top: 15px;
   padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.slider-box{
+  height: 350px;
+  color: black;
+  background-color: whitesmoke;
+}
+
+.banner-services{
+  height: 100px;
+  font-family: Poppins, Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  background-color: rgb(6, 0, 87);
+}
+
+.banner-services > h2{
+  padding-left: 33px;
+  padding-right: 33px;
+}
+
+@media all and (max-width: 824px){
+  .welcome{ height: 250px;}
+}
+@media all and (max-width: 550px){
+  .banner-services{ height: 170px;}
+}
+@media all and (max-width: 467px){
+  .welcome{ height: 300px;}
+}
+@media all and (max-width: 408px){
+  .welcome{ height: 350px;}
 }
