@@ -1,0 +1,75 @@
+/*************************************************************************************************
+ * Hoja de estilos para el componente Slider
+ * card 277 height - 202 widht 
+ * 
+ *************************************************************************************************/
+
+.slider-box{/*contenedor general*/
+    width: 100%;
+    height: 350px;
+    position: relative;
+	margin: auto;
+    color: black;
+    background-color: whitesmoke;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.slider-img-container{/*contenedor de las imagenes*/
+    height: 280px;
+    display: flex;
+    /*flex-wrap: wrap;*/
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 55px;
+    transition: transform 0.3s;
+}
+
+.slider-frame{/*marco sobrepuesto sobre las imagenes*/
+    width: 100%;
+    height: 350px;
+    position: absolute;
+    border-left: 50px;
+    border-right: 50px;
+    border-top: 35px;
+    border-bottom: 35px;
+    border-style: solid;
+    border-color: whitesmoke;
+    /*padding: 35px 50px;*/
+    vertical-align: middle;
+    z-index: 1;
+}
+
+.slider-prev-btn, .slider-next-btn {/* botones anterior y siguiente */
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border:none;
+    user-select: none;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.slider-next-btn{
+    right: 0;
+    z-index: 2;
+}
+
+.slider-prev-btn{
+    left: 0;
+    z-index: 3;
+}
+
+.slider-prev-btn:hover, .slider-next-btn:hover{
+    background-color: rgba(0,0,0,0.5);
+}

@@ -1,0 +1,48 @@
+/*************************************************************************************************
+ * Hoja de estilos para el componente SliderImgCard
+ *************************************************************************************************/
+
+.slider-img-card-box-hidden{
+    display: none;
+}
+
+.slider-img-card-box{
+    width: 182px;
+    box-shadow: 3px 3px 5px gray;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.slider-img-card-box-img{
+    width: 100%;
+    height: 182px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.slider-img-card-box-img > img{
+    width: 100%;
+}
+
+.slider-img-card-text{
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.slider-img-card-text > h4 {
+    padding-bottom: 10px;
+}
+
+.slider-img-card-text > p {
+    padding-top: 7px;
+}
+
