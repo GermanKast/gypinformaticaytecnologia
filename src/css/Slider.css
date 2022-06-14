@@ -73,3 +73,20 @@
 .slider-prev-btn:hover, .slider-next-btn:hover{
     background-color: rgba(0,0,0,0.5);
 }
+/*1038 1226
+@media only screen and (min-width: 1900px){
+    .slider-frame{
+        border-left: 50px;
+        border-right: 50px;
+    }
+}
+@media all and (max-widht: 930px){
+    .slider-box{width: 730px;}
+}
+@media all and (max-widht: 930px){
+    .slider-box{width: 730px;}
+}
+@media all and (max-widht: 730px){
+    .slider-box{width: 518px;}
+}
+*/
