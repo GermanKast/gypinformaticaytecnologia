@@ -66,10 +66,14 @@ function Slider(){
     return(
         <div className="slider-box" onMouseEnter={() => {setPause(true)}} onMouseLeave={() => {setPause(false)}}>
             <div className="wraper-slider-prev-btn">
-                <button className="slider-prev-btn" onClick={() => {updateIndex(index-1)}}>-</button>
+                <button className="slider-prev-btn" onClick={() => {updateIndex(index-1)}}>
+                    <img src={require("../../imgs/icons/icon-left-row-black.png")} alt="Icono flecha izquierda" />
+                </button>
             </div>
             <div className="wraper-slider-next-btn">
-                <button className="slider-next-btn" onClick={() => {updateIndex(index+1)}}>+</button>
+                <button className="slider-next-btn" onClick={() => {updateIndex(index+1)}}>
+                    <img src={require("../../imgs/icons/icon-right-row-black.png")} alt="Icono flecha derecha" />
+                </button>
             </div>
             <div className="slider-img-container" style={{transform: "translateX(-"+index*206+"px)"}}>
                 {products.map((product, i) => 

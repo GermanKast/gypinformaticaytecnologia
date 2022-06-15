@@ -68,49 +68,24 @@
 
 .slider-prev-btn, .slider-next-btn {/* botones anterior y siguiente */
     cursor: pointer;
-    width: auto;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
+    width: 40px;
+    height: 80px;
     border:none;
     user-select: none;
-    background-color: rgba(0,0,0,0.3);
+    background: none;
+    opacity: 0.5;
 }
 
-/*
-.slider-prev-btn, .slider-next-btn {botones anterior y siguiente
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border:none;
-    user-select: none;
-    background-color: rgba(0,0,0,0.3);
-}
-
-.slider-next-btn{
-    right: 0;
-    z-index: 2;
-}
-
-.slider-prev-btn{
-    left: 0;
-    z-index: 3;
-}
-*/
 
 .slider-prev-btn:hover, .slider-next-btn:hover{
-    background-color: rgba(0,0,0,0.5);
+    opacity: 0.7;
 }
-/*1038 1226
+
+.slider-prev-btn:active, .slider-next-btn:active{
+    opacity: 1;
+}
+/*
+1038 1226
 @media only screen and (min-width: 1900px){
     .slider-frame{
         border-left: 50px;
