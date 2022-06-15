@@ -43,7 +43,7 @@ function Slider(){
         
         updateItems();
         if(newIndex < 0){
-            newIndex = products.length - 1;
+            newIndex = products.length - items;
         }else if(newIndex > products.length - items){
             newIndex = 0;
         }
@@ -65,9 +65,12 @@ function Slider(){
 
     return(
         <div className="slider-box" onMouseEnter={() => {setPause(true)}} onMouseLeave={() => {setPause(false)}}>
-            <button className="slider-prev-btn" onClick={() => {updateIndex(index-1)}}>-</button>
-            <button className="slider-next-btn" onClick={() => {updateIndex(index+1)}}>+</button>
-            <div className="slider-frame"/>
+            <div className="wraper-slider-prev-btn">
+                <button className="slider-prev-btn" onClick={() => {updateIndex(index-1)}}>-</button>
+            </div>
+            <div className="wraper-slider-next-btn">
+                <button className="slider-next-btn" onClick={() => {updateIndex(index+1)}}>+</button>
+            </div>
             <div className="slider-img-container" style={{transform: "translateX(-"+index*206+"px)"}}>
                 {products.map((product, i) => 
                     <SliderImgCard
@@ -87,7 +90,6 @@ function Slider(){
                 title={products[itemToShow].name}
                 price={products[itemToShow].price}
                 description={products[itemToShow].description}
-
             />
         </div>
     );
