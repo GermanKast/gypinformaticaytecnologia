@@ -30,7 +30,6 @@ function App() {
 					invertRow={service.invertRow}
 				/>	
 			)}
-			
 		</div>
     </div>
   );

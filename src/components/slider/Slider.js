@@ -2,7 +2,8 @@ import React, {useEffect, useState} from "react";
 import "../../css/Slider.css";
 import SliderImgCard from "./SliderImgCard.js";
 import products from "../data/products.js";
-import ModalItemSlider from "./ModalItemSlider.js";
+import CardSlider from "./CardSlider.js";
+import Modal from "../modal/Modal.js";
 
 function Slider(){
     // numero de imagenes que se ocultan hacia la izquierda dentro del slider
@@ -87,14 +88,14 @@ function Slider(){
                     />        
                 )}
             </div>
-            <ModalItemSlider
-                modalShow={modalShow}
-                setModalShow={setModalShow}
-                img={products[itemToShow].img}
-                title={products[itemToShow].name}
-                price={products[itemToShow].price}
-                description={products[itemToShow].description}
-            />
+            <Modal modalShow={modalShow} setModalShow={setModalShow}>
+                <CardSlider
+                    img={products[itemToShow].img}
+                    title={products[itemToShow].name}
+                    price={products[itemToShow].price}
+                    description={products[itemToShow].description}
+                />
+            </Modal>
         </div>
     );
 }
