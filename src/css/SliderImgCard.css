@@ -2,10 +2,6 @@
  * Hoja de estilos para el componente SliderImgCard
  *************************************************************************************************/
 
-.slider-img-card-box-hidden{
-    display: none;
-}
-
 .slider-img-card-box{
     width: 182px;
     box-shadow: 3px 3px 5px gray;
@@ -17,6 +13,7 @@
     text-align: center;
     margin-left: 12px;
     margin-right: 12px;
+    background-color: whitesmoke;
 }
 
 .slider-img-card-box-img{
@@ -46,3 +43,6 @@
     padding-top: 7px;
 }
 
+.slider-img-card-box:hover{
+    background-color: white;
+}

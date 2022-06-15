@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import "../../css/Slider.css";
 import SliderImgCard from "./SliderImgCard.js";
 import products from "../data/products.js";
+import ModalItemSlider from "./ModalItemSlider.js";
 
 function Slider(){
     // numero de imagenes que se ocultan hacia la izquierda dentro del slider
@@ -10,6 +11,16 @@ function Slider(){
     const [pause, setPause] = useState(false);
     //cantidad de items a mostrar dependiendo el ancho de pantalla
     const [items, setItems] = useState(6);
+    // mostrar ocultar el modal
+    const [modalShow, setModalShow] = useState(false);
+    // item que se mostrará en el modal
+    const [itemToShow, setItemToShow] = useState(0);
+
+    const showModal = (itemNumber) => {
+        setItemToShow(itemNumber);
+        setModalShow(true);
+        console.log("mostrar modal con item N° "+itemNumber);
+    }
 
     const updateItems = () => {
         let wScreen = window.screen.width;
@@ -64,10 +75,20 @@ function Slider(){
                         img={product.img}
                         title={product.name}
                         price={product.price}
-                        display={true}
+                        itemKey={i}
+                        handleClick={showModal}
                     />        
                 )}
             </div>
+            <ModalItemSlider
+                modalShow={modalShow}
+                setModalShow={setModalShow}
+                img={products[itemToShow].img}
+                title={products[itemToShow].name}
+                price={products[itemToShow].price}
+                description={products[itemToShow].description}
+
+            />
         </div>
     );
 }

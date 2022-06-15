@@ -3,7 +3,6 @@ import Header from "./components/Header.js";
 import SectionCard from "./components/SectionCard.js";
 import serviceList from "./components/data/services.js";
 import Slider from "./components/slider/Slider.js";
-import Modal from "./components/modal/Modal.js";
 
 function App() {
   return (
@@ -33,7 +32,6 @@ function App() {
 			)}
 			
 		</div>
-		<Modal/>
     </div>
   );
 }

@@ -1,12 +1,15 @@
 import React from "react";
 import "../../css/SliderImgCard.css";
 
-function SliderImgCard({ img, title, price, display }){
-
-    const cssClass = display ? "slider-img-card-box": "slider-img-card-box-hidden";
-
+function SliderImgCard({ img, title, price, itemKey, handleClick }){
+/*
+    const showModal = () => {
+        setItemToShow(itemKey);
+        setModalShow();
+    }
+*/
     return(
-        <div className={cssClass}>
+        <div className="slider-img-card-box" onClick={() => { handleClick(itemKey) }}>
             <div className="slider-img-card-box-img">
                 <img src={require( "../../imgs/products/" + img + ".jpg" )} alt={img} />
             </div>
