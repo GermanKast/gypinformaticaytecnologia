@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import  "../../css/Modal.css";
 
-
-//
 function Modal(){
+
+    const [modalItem, setModalItem] = useState(false);
+
+
     return(
         <div className="modal">
             <div className="modal-content">

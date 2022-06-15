@@ -57,7 +57,7 @@ function Slider(){
             <button className="slider-prev-btn" onClick={() => {updateIndex(index-1)}}>-</button>
             <button className="slider-next-btn" onClick={() => {updateIndex(index+1)}}>+</button>
             <div className="slider-frame"/>
-            <div className="slider-img-container" style={{transform: "translateX(-"+index*11+"%)"}}>
+            <div className="slider-img-container" style={{transform: "translateX(-"+index*206+"px)"}}>
                 {products.map((product, i) => 
                     <SliderImgCard
                         key={"slider-product"+i}

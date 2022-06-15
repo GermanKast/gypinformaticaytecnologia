@@ -10,7 +10,8 @@
     left: 0;
     bottom: 0;
     background: rgba(85,85,85,.75);
-    display: flex;
+    display: none;
+    /*display: flex;*/
     align-items: center;
     justify-content: center;
 }
