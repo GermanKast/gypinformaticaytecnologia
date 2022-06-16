@@ -3,6 +3,7 @@ import Header from "./components/Header.js";
 import SectionCard from "./components/SectionCard.js";
 import serviceList from "./components/data/services.js";
 import Slider from "./components/slider/Slider.js";
+import UsSection from "./components/sections/UsSection.js";
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
 					invertRow={service.invertRow}
 				/>	
 			)}
+		</div>
+		<div className="container-wrap">
+			<UsSection/>
 		</div>
     </div>
   );
