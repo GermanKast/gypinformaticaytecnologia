@@ -4,6 +4,7 @@ import SectionCard from "./components/SectionCard.js";
 import serviceList from "./components/data/services.js";
 import Slider from "./components/slider/Slider.js";
 import UsSection from "./components/sections/UsSection.js";
+import Footer from "./components/footer/Footer.js";
 
 function App() {
   return (
@@ -34,6 +35,9 @@ function App() {
 		</div>
 		<div className="container-wrap">
 			<UsSection/>
+		</div>
+		<div className="container-wrap">
+			<Footer/>
 		</div>
     </div>
   );

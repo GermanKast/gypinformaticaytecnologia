@@ -28,8 +28,9 @@
 }
 
 .us-image{
-    width: 70%;
+    width: 100%;
     right: 0;
+    bottom: 0;
 }
 
 .us-text{

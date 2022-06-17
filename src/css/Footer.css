@@ -1,0 +1,51 @@
+/****************************************************************************************************************
+ *  Hoja de estilos del componente Footer
+ ****************************************************************************************************************/
+
+.footer{
+    width: 100%;
+    height: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background: linear-gradient(120deg, #fb6bdd 30%, #b68afb);
+    background: -prefix-linear-gradient(top, #b68afb, #fb6bdd);
+}
+
+.contact-us{
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media{
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media-logos{
+    border: 2px solid palevioletred;
+    width: 90%;
+}
+
+.gyp-google-map{
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame-google-street{
+    width: 300px;
+    height: 200px;
+    border: 2px solid yellowgreen;
+}

@@ -59,7 +59,15 @@ html, body{
   height: 190px;
   font-family: Poppins, Helvetica, Arial, sans-serif;
   font-size: larger;
+  background: linear-gradient(120deg, rgba(154, 50, 126, 0.8) 40%, rgba(0, 109, 179, 0.8));
+  /*
+  background: linear-gradient(120deg, #9a327e 40%, #006db3);
+  */
+  /*
   background-color: rgba(1, 6, 82, 0.9);
+  background: linear-gradient(120deg, #fb6bdd 30%, #b68afb);
+  background: -prefix-linear-gradient(top, #b68afb, #fb6bdd);
+  */
 }
 
 .welcome > * {

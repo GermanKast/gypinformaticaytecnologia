@@ -4,8 +4,8 @@
 
 .background-blue-solid{ background-color:rgb(1, 6, 82);}
 .background-violet-solid{ background-color:rgb(111, 2, 63);}
-.background-blue-trans{ background-color:rgba(1, 6, 82, 0.7);}
-.background-violet-trans{ background-color:rgba(111, 2, 63, 0.7);}
+.background-blue-trans{ background-color:rgba(1, 6, 82, 0.8);}
+.background-violet-trans{ background-color:rgba(111, 2, 63, 0.8);}
 
 .section-card-wrap-invert{ 
     display: flex;
