@@ -1,11 +1,19 @@
 /*************************************************************************************************
  * Hoja de estilos para el componente Section-card
+ * #270c53, #531262
  *************************************************************************************************/
 
+/*
 .background-blue-solid{ background-color:rgb(1, 6, 82);}
 .background-violet-solid{ background-color:rgb(111, 2, 63);}
 .background-blue-trans{ background-color:rgba(1, 6, 82, 0.8);}
 .background-violet-trans{ background-color:rgba(111, 2, 63, 0.8);}
+*/
+
+.background-blue-solid{ background-color: #270c53;}
+.background-violet-solid{ background-color:#531262;}
+.background-blue-trans{ background-color:rgba(39, 12, 83, 0.8);}
+.background-violet-trans{ background-color:rgba(83, 18, 98, 0.8);}
 
 .section-card-wrap-invert{ 
     display: flex;
