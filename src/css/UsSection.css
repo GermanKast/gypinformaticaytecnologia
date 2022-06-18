@@ -3,18 +3,14 @@
 .section-us{
     width: 100%;
     height: 500px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
     align-items: center;
     justify-items: center;
     text-align: center;
     position: relative;
-    background-color: white;
     overflow: hidden;
+    background: #270c53;
+    
 }
 
 .us-image, .us-text{
@@ -28,19 +24,19 @@
 }
 
 .us-image{
-    width: 100%;
-    right: 0;
-    bottom: 0;
+    width: 70%;
+    height: auto;
 }
 
 .us-text{
     width: 40%;
-    left: 0;
+    right: 0;
     padding: 20px;
+    margin-right: 50px;
 }
 
 .us-text > h2{
-    color: #702ada;
+    color: white;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 50px;
     padding-bottom: 25px;
@@ -48,13 +44,17 @@
 
 .us-text > p{
     width: 60%;
-    color: #b251e6;
+    color: white;
     font-family: Arial, sans-serif, Helvetica;
     font-size: 20px;
 }
 
 @media only screen and (max-width: 960px){
-    .section-us{ flex-direction: column-reverse; height: auto; }
+    .section-us{ 
+        flex-direction: column-reverse;
+        height: auto;
+        background: linear-gradient(90deg, #2d0d56, #270c53) ;
+    }
     .us-image, .us-text{ position: static; width: 100%; }
-    .us-text{ padding-top: 50px; padding-bottom: 0; }
+    .us-text{ padding-top: 50px; margin: 0;}
 }

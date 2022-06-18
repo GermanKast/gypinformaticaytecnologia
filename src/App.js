@@ -5,15 +5,13 @@ import serviceList from "./components/data/services.js";
 import Slider from "./components/slider/Slider.js";
 import UsSection from "./components/sections/UsSection.js";
 import Footer from "./components/footer/Footer.js";
+import Banner from "./components/banner/Banner.js";
 
 function App() {
   return (
     <div className="App">
     	<Header/>
-		<div className='container welcome'>
-			<h1>TENEMOS NUEVOS ACCESORIOS PARA TI</h1>
-			<h2>Ahorra más</h2>
-		</div>
+		<Banner/>
 		<div className='container-wrap'>
 			<Slider></Slider>
 		</div>

@@ -55,38 +55,25 @@ html, body{
   text-align: center;
 }
 
-.welcome{
-  height: 190px;
-  font-family: Poppins, Helvetica, Arial, sans-serif;
-  font-size: larger;
-  background: linear-gradient(120deg, rgba(154, 50, 126, 0.8) 40%, rgba(0, 109, 179, 0.8));
-  /*
-  background: linear-gradient(120deg, #9a327e 40%, #006db3);
-  */
-  /*
-  background-color: rgba(1, 6, 82, 0.9);
-  background: linear-gradient(120deg, #fb6bdd 30%, #b68afb);
-  background: -prefix-linear-gradient(top, #b68afb, #fb6bdd);
-  */
-}
-
-.welcome > * {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
 .banner-services{
   height: 100px;
   font-family: Poppins, Helvetica, Arial, sans-serif;
   font-size: 30px;
-  background-color: rgb(6, 0, 87);
+  background: linear-gradient(90deg, #270c53, #531262 70%);
+  /*background-color: rgb(6, 0, 87);*/
 }
 
 .banner-services > h2{
   padding-left: 33px;
   padding-right: 33px;
+}
+
+hr {
+  border: 0;
+  margin: 1.35em auto;
+  max-width: 100%;
+  background-position: 50%;
+  box-sizing: border-box;
 }
 
 @media all and (max-width: 824px){

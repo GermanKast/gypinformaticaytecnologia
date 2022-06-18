@@ -1,0 +1,43 @@
+/*******************************************************************************************************************
+ * Hoja de estilos componente Banner
+ *******************************************************************************************************************/
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Bold-700.woff') format('woff');
+    font-style: normal;
+    font-weight: 700;
+}
+
+.banner-back{
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.banner{
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 190px;
+    font-family: Poppins, Helvetica, Arial, sans-serif;
+    font-size: larger;
+    background: linear-gradient(120deg, rgba(104, 0, 76, 0.7) 40%, rgba(0, 73, 119, 0.7));
+    /*
+    background: linear-gradient(120deg, rgba(154, 50, 126, 0.8) 40%, rgba(0, 109, 179, 0.8));
+    background: linear-gradient(120deg, #9a327e 40%, #006db3);
+    background-color: rgba(1, 6, 82, 0.9);
+    background: linear-gradient(120deg, #fb6bdd 30%, #b68afb);
+    background: -prefix-linear-gradient(top, #b68afb, #fb6bdd);
+    */
+}
+
+.banner > * {
+    padding: 15px 50px;
+}
+
+@media only screen and ( max-width: 864px ){
+    .banner{ height: 250px;}
+}
