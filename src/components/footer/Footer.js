@@ -4,7 +4,7 @@ import backImg from "../../imgs/footer/carbon.jpg";
 
 function Footer(){
     return(
-        <div className="footer-back" style={{backgroundImage: "url("+ backImg +")"}}>
+        <div id="contactData" className="footer-back" style={{backgroundImage: "url("+ backImg +")"}}>
             <div className="footer">
                 <div className="divider">
                     <hr className="shine"/>

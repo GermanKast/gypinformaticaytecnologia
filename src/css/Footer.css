@@ -9,12 +9,12 @@
     background-position: center;
 }
 
-
 .footer{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    color: white;
     background: linear-gradient(90deg, rgba(83, 18, 98, 0.7), rgba(39, 12, 83, 0.7) 70%);
     /*background: linear-gradient(90deg, #531262, #270c53 70%);*/
 }
@@ -27,7 +27,6 @@
 
 .divider > hr {
     border: 0;
-    margin: 1.35em auto;
     max-width: 100%;
     background-position: 50%;
     box-sizing: border-box;
@@ -159,6 +158,7 @@
 
 .legal-mark > p > a{
     color: #ff57e3;
+    margin-left: 10px;
 }
 
 @media only screen and (max-width: 960px){

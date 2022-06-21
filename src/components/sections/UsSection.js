@@ -3,7 +3,7 @@ import "../../css/UsSection.css";
 
 function UsSection(){
     return(
-        <div className="section-us">
+        <div id="usSection" className="section-us">
             <img className="us-image" src={require("../../imgs/us/diseño-web-caricatura-fondo-oscuro-short.jpg")} alt="" />
             <div className="us-text">
                 <h2>Sobre Nosotros</h2>

@@ -1,0 +1,156 @@
+/***************************************************************************************************************
+ *  Hoja de estilos para el componente Navbar
+ ***************************************************************************************************************/
+
+ .navbar-wraper{
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+ }
+
+/*******************************************************************************************************************/
+/**************************************************** Shine inverted ***********************************************/
+.divider-reverse{
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+.divider-reverse > hr {
+    border: 0;
+    max-width: 100%;
+    background-position: 50%;
+  }
+
+.shine-reverse {
+    height: 20px;
+    width: 100%;
+    background-image: radial-gradient(
+        farthest-side at 50% 100%,
+        rgba(204, 204, 204, 0.7), rgba(0,0,0,0)
+    );
+}
+
+/***************************************************************************************************************/
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    background-image: linear-gradient(120deg, rgba(104, 0, 76, 0.7) 40%, rgba(0, 73, 119, 0.7)), url('../imgs/navbar/back-navbar.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo-GyP-navbar{
+    width: 75px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 30px;
+    margin-top: 6px;
+}
+
+/*********************************************** btn hamburguer **************************************************/
+
+.btn-small-screen{
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    margin-right: 20px;
+    padding-top: 5px;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+.btn-small-screen > hr{
+    width: 70%;
+    height: 5px;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    background: white;
+}
+
+.btn-small-screen:active{
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/**************************************************** links ******************************************************/
+
+.container-link-navbar{
+    position: absolute;
+    right: 0;
+    width: auto;
+    height: 60px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.link-navbar{
+    margin: 10px 20px;
+    text-decoration: none;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.link-navbar:hover{
+    color: white;
+}
+
+/*********************************************** animacion links ************************************************/
+
+@media only screen and (max-width: 950px){
+    .btn-small-screen{ display: flex;}
+    .container-link-navbar{
+        z-index: -2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        top: 0;
+        margin: 0;
+        transition: top 1s;
+        background-image: linear-gradient(120deg, rgb(104, 0, 76) 40%, rgb(0, 73, 119));
+    }    
+}
+
+@media only screen and (max-width: 620px){
+    .container-link-navbar{
+        z-index: -2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 192px;
+        top: 0;
+        margin: 0;
+        padding: 10px 0;
+        transition: top 1s;
+        background-image: linear-gradient(120deg, rgb(104, 0, 76) 40%, rgb(0, 73, 119));
+    }   
+}

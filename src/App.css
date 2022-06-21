@@ -55,25 +55,10 @@ html, body{
   text-align: center;
 }
 
-.banner-services{
-  height: 100px;
-  font-family: Poppins, Helvetica, Arial, sans-serif;
-  font-size: 30px;
-  background: linear-gradient(90deg, #270c53, #531262 70%);
-  /*background-color: rgb(6, 0, 87);*/
-}
-
-.banner-services > h2{
-  padding-left: 33px;
-  padding-right: 33px;
-}
-
 @media all and (max-width: 824px){
   .welcome{ height: 250px;}
 }
-@media all and (max-width: 550px){
-  .banner-services{ height: 170px;}
-}
+
 @media all and (max-width: 467px){
   .welcome{ height: 300px;}
 }

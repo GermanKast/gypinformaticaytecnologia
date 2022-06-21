@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/SectionCard.css';
+import '../../css/SectionCard.css';
 import PropTypes from "prop-types";
 
 /**************************************************************************************************
@@ -61,7 +61,7 @@ export default function SectionCard({ title, subtitle, text, img, colorbckgrnd, 
                 <p>{text}</p>
             </div>
             <div className='section-card-img'>
-                <img src={require('../imgs/services/' + img + '.jpg')} alt={img} />
+                <img src={require('../../imgs/services/' + img + '.jpg')} alt={img} />
             </div>
         </div>
     );

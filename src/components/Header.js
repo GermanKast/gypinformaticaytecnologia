@@ -4,8 +4,8 @@ import '../css/Header.css';
 function Header(){
     
     return(
-        <div className="container-header">
-            <img className="header-logo-gyp" src={require('../imgs/logo-gyp-500x300.png')} alt="logo gyp" />
+        <div id="home" className="container-header">
+            <img src={require('../imgs/banner-gyp-largo.jpg')} alt="logo gyp" />
         </div>
     );
 }

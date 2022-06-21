@@ -41,3 +41,11 @@
 @media only screen and ( max-width: 864px ){
     .banner{ height: 250px;}
 }
+
+@media only screen and ( max-width: 507px ){
+    .banner{ height: 300px;}
+}
+
+@media only screen and ( max-width: 448px ){
+    .banner{ height: 350px;}
+}
