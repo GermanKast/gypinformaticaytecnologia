@@ -2,7 +2,7 @@ export default [
     {
         img:"cable-usb-tipo-b",
         name:"Cable USB - Tipo B",
-        price:"15.000",
+        price:"15000",
         description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {

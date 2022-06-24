@@ -74,7 +74,7 @@ html, body{
     align-items: center;
     justify-content: center;
     padding-bottom: 20px;
-    color: rgb(0, 85, 138);
+    color: rgb(111, 2, 63);
 }
 
 .cart-btn-container{
@@ -87,29 +87,20 @@ html, body{
 /***************************************** shooping cart / table **************************************************/
 
 .cart-table{
-    width: 100%;
     padding: 10px;
+    border-collapse: collapse;
 }
 
-.cart-table > thead{
-    height: 40px;
-}
-
-.cart-table > thead > tr >th{
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    color: rgb(2, 107, 172);
-    background: linear-gradient(rgb(213, 239, 255), rgb(153, 216, 255));
+.cart-table > tbody > tr{
+    border-bottom: 1px solid rgb(207, 207, 207);
 }
 
 .cart-table > tbody > tr > td{
-    background: rgb(240, 253, 255);
-    /*border: 1px solid rgb(210, 253, 255);*/
-    border: 1px solid rgb(228, 238, 255);
+    width: auto;
 }
 
 .shooping-cart-item-img{
-    width: 50px;
+    width: 70px;
     height: auto;
 }
 

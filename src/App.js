@@ -47,30 +47,22 @@ function App() {
 			<Modal modalShow={showCart} setModalShow={setShowCart} title="Carrito de Compras">
 				<div className="cart-container">
 					<div className="cart-title">
-						<h3>Tu lista de compras tiene {shoppingList.length+" productos"}</h3>
+						<h3>En tu lista de compras tienes {shoppingList.length+" productos"}</h3>
 					</div>
 					<table  className="cart-table" style={{opacity: shoppingList.length > 0 ? "1": "0"}}>
-						<thead>
-							<tr>
-								<th></th>
-								<th>Producto</th>
-								<th>Precio</th>
-								<th>Cantidad</th>
-								<th>Subtotal</th>
-								<th>Eliminar</th>
-							</tr>
-						</thead>
 						<tbody>
 							{shoppingList.map(item =>
 								<tr id={ item.index } key={item.index}>
-									<td style={{background: "none"}}>
+									<td>
 										<img className="shooping-cart-item-img" src={require("./imgs/products/" + item.img + ".jpg")} alt={item.img} />
 									</td>
-									<td>{ item.prodName }</td>
-									<td>{ "$"+item.price }</td>
-									<td>{ item.cant }</td>
-									<td>{ "$"+item.subTotal }</td>
-									<td>
+									<td style={{textAlign:"left"}}>
+										<p>{ item.prodName }</p>
+										<p style={{color: "gray"}}>{ "$"+item.price }</p>
+									</td>
+									<td style={{minWidth:"100px"}}>{ "x"+item.cant }</td>
+									<td style={{minWidth:"150px"}}>{ "$"+item.subTotal }</td>
+									<td style={{minWidth:"70px"}}>
 										<img className="btn-delete-cart-item" src={require("./imgs/icons/eliminar.png")} alt="eliminar" onClick={()=>{deleteElement(item.index)}}/>
 									</td>
 								</tr>
