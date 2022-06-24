@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "../css/Navbar.css";
 
-function Navbar(){
+function Navbar( { showCart, setShowCart } ){
 
     const [animateLinks, setAnimatelinks] = useState(false);
 
@@ -16,7 +16,7 @@ function Navbar(){
         if(animateLinks && smallScreen){ // mostrar links y pantalla peq
             return "59px";
         }else if(!animateLinks && smallScreen){ // ocultar links y pantalla peq
-            return "-132px";
+            return "-197px";
         }else if(animateLinks && !smallScreen){ // mostrar links y pantalla grande
             return "59px";
         }else{ // ocultar links y pantalla mediana
@@ -38,6 +38,7 @@ function Navbar(){
                 <a className="link-navbar" href="#serviceList">Servicios</a>
                 <a className="link-navbar" href="#usSection">Nosotros</a>
                 <a className="link-navbar" href="#contactData">Contacto</a>
+                <img onClick={() => {setShowCart(!showCart)}} className="shopping-cart-navbar" src={require("../imgs/icons/shopping-cart-white-64x64.png")} alt="Icono carrito de compras" />
             </div>
             <div className="divider-reverse">
                 <hr className="shine-reverse"/>

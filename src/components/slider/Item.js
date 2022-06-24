@@ -1,7 +1,7 @@
 import React from "react";
-import "../../css/SliderImgCard.css";
+import "../../css/Item.css";
 
-function SliderImgCard({ img, title, price, itemKey, handleClick }){
+function Item({ img, title, price, itemKey, handleClick }){
 /*
     const showModal = () => {
         setItemToShow(itemKey);
@@ -17,10 +17,10 @@ function SliderImgCard({ img, title, price, itemKey, handleClick }){
             <div className="slider-img-card-text">
                 <h4>{title}</h4>
                 <hr />
-                <p>{price}</p>
+                <p>{"$"+price}</p>
             </div>
         </div>
     );
 }
 
-export default SliderImgCard;
+export default Item;

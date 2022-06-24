@@ -1,26 +1,27 @@
 import React, {useEffect, useState} from "react";
 import "../../css/Slider.css";
-import SliderImgCard from "./SliderImgCard.js";
-import products from "../data/products.js";
-import CardSlider from "./CardSlider.js";
+import Item from "./Item.js";
+import ItemDescription from "./ItemDescription.js";
 import Modal from "../modal/Modal.js";
+import products from "../data/products.js";
 
-function Slider(){
+function Slider( { showCart, setShowCart, shoppingList, setShoppingList } ){
+
     // numero de imagenes que se ocultan hacia la izquierda dentro del slider
     const [index, setIndex] = useState(0);
     // pausa el movimiento del slider al mouse enter / mouse leave
     const [pause, setPause] = useState(false);
-    //cantidad de items a mostrar dependiendo el ancho de pantalla
+    //cantidad de items a mostrar en slider dependiendo el ancho de pantalla
     const [items, setItems] = useState(6);
     // mostrar ocultar el modal
-    const [modalShow, setModalShow] = useState(false);
+    const [modal, setModal] = useState(false);
     // item que se mostrará en el modal
     const [itemToShow, setItemToShow] = useState(0);
 
     const showModal = (itemNumber) => {
         setItemToShow(itemNumber);
-        setModalShow(true);
-        console.log("mostrar modal con item N° "+itemNumber);
+        setModal(true);
+        //console.log("mostrar modal con item N° "+itemNumber);
     }
 
     const updateItems = () => {
@@ -78,7 +79,7 @@ function Slider(){
             </div>
             <div className="slider-img-container" style={{transform: "translateX(-"+index*206+"px)"}}>
                 {products.map((product, i) => 
-                    <SliderImgCard
+                    <Item
                         key={"slider-product"+i}
                         img={product.img}
                         title={product.name}
@@ -88,12 +89,17 @@ function Slider(){
                     />        
                 )}
             </div>
-            <Modal modalShow={modalShow} setModalShow={setModalShow}>
-                <CardSlider
+            <Modal modalShow={modal} setModalShow={setModal}>
+                <ItemDescription
+                    index={itemToShow}
                     img={products[itemToShow].img}
                     title={products[itemToShow].name}
                     price={products[itemToShow].price}
                     description={products[itemToShow].description}
+                    shoppingList={shoppingList}
+                    setShoppingList={setShoppingList}
+                    showCart={showCart}
+                    setShowCart={setShowCart}
                 />
             </Modal>
         </div>

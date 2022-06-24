@@ -86,7 +86,7 @@
     font-size: 20px;
 }
 
-.btn-addToCar{
+.btn-addToCart{
     width: auto;
     height: 50px;
     text-align: center;
@@ -99,12 +99,12 @@
     border-radius: 4px;
 }
 
-.btn-addToCar:hover{
+.btn-addToCart:hover{
     background-color: rgb(85, 7, 51);
     cursor: pointer;
 }
 
-.btn-addToCar:active{
+.btn-addToCart:active{
     background-color: rgb(56, 1, 32);
     cursor: pointer;
 }

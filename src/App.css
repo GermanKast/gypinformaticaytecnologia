@@ -55,6 +55,108 @@ html, body{
   text-align: center;
 }
 
+/********************************************* shooping cart *************************************************/
+/************************************* shooping cart / containers *********************************************/
+
+.cart-container{
+	width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-title{
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    color: rgb(0, 85, 138);
+}
+
+.cart-btn-container{
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/***************************************** shooping cart / table **************************************************/
+
+.cart-table{
+    width: 100%;
+    padding: 10px;
+}
+
+.cart-table > thead{
+    height: 40px;
+}
+
+.cart-table > thead > tr >th{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    color: rgb(2, 107, 172);
+    background: linear-gradient(rgb(213, 239, 255), rgb(153, 216, 255));
+}
+
+.cart-table > tbody > tr > td{
+    background: rgb(240, 253, 255);
+    /*border: 1px solid rgb(210, 253, 255);*/
+    border: 1px solid rgb(228, 238, 255);
+}
+
+.shooping-cart-item-img{
+    width: 50px;
+    height: auto;
+}
+
+.btn-delete-cart-item{
+    width: 30px;
+    height: 30px;
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+.btn-delete-cart-item:hover{
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+}
+
+.btn-delete-cart-item:active{
+    opacity: 0.5;
+}
+
+/************************************************ shooping cart / buttons *****************************************/
+
+.btn-shopping-cart{
+    width: auto;
+    height: 50px;
+    text-align: center;
+    font-size: medium;
+    margin: 10px;
+    padding: 0 15px;
+    background-color: rgb(111, 2, 63);
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.btn-shopping-cart:hover{
+    background-color: rgb(85, 7, 51);
+    cursor: pointer;
+}
+
+.btn-shopping-cart:active{
+    background-color: rgb(56, 1, 32);
+    cursor: pointer;
+}
+
+/******************************************************************************************************************/
+
 @media all and (max-width: 824px){
   .welcome{ height: 250px;}
 }
