@@ -59,7 +59,7 @@ html, body{
 /************************************* shooping cart / containers *********************************************/
 
 .cart-container{
-	width: 100%;
+	  width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -82,6 +82,7 @@ html, body{
     text-align: center;
     align-items: center;
     justify-content: center;
+    padding-top: 20px;
 }
 
 /***************************************** shooping cart / table **************************************************/
@@ -102,6 +103,10 @@ html, body{
 .shooping-cart-item-img{
     width: 70px;
     height: auto;
+}
+
+.row-total{
+  height: 70px;
 }
 
 .btn-delete-cart-item{

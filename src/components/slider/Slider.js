@@ -5,7 +5,7 @@ import ItemDescription from "./ItemDescription.js";
 import Modal from "../modal/Modal.js";
 import products from "../data/products.js";
 
-function Slider( { showCart, setShowCart, shoppingList, setShoppingList } ){
+function Slider( { showCart, setShowCart, shoppingList, setShoppingList, updateOrder, setUpdateOrder } ){
 
     // numero de imagenes que se ocultan hacia la izquierda dentro del slider
     const [index, setIndex] = useState(0);
@@ -17,13 +17,17 @@ function Slider( { showCart, setShowCart, shoppingList, setShoppingList } ){
     const [modal, setModal] = useState(false);
     // item que se mostrará en el modal
     const [itemToShow, setItemToShow] = useState(0);
+    // valor del input
+    const [inputVal, setInputVal] = useState(1);
 
+    // se establece el producto a mostrar en el modal y se abre el modal 
     const showModal = (itemNumber) => {
         setItemToShow(itemNumber);
         setModal(true);
         //console.log("mostrar modal con item N° "+itemNumber);
     }
 
+    // establece la cantidad de items a mostrar en el slider segun el tamaño de la pantalla
     const updateItems = () => {
         let wScreen = window.screen.width;
         let itemsToShow = 1;
@@ -41,6 +45,7 @@ function Slider( { showCart, setShowCart, shoppingList, setShoppingList } ){
         setItems(itemsToShow);
     };
 
+    // hace que los productos se muestren en bucle (cuando se terminan los productos vuelve al inicio)
     const updateIndex = (newIndex) => {
         
         updateItems();
@@ -53,10 +58,30 @@ function Slider( { showCart, setShowCart, shoppingList, setShoppingList } ){
         
     };
 
+    const getinputVal = (list, index) => {
+    
+        let val = 1;
+        const itemInList = list.find( item => item.index == index );
+        
+        //item existe en la lista de compras
+        if(itemInList){
+            val = itemInList.cant;
+        }
+        //console.log("el index es : "+index);
+        //console.log("valor del input : "+val);
+        console.log(itemInList);
+        console.log(val);
+        //return (val);
+        setInputVal(val);
+    };
+
+    // ejecuta la animacion del slider cada 2.5 s
     useEffect(()=>{
         const interval = setInterval(()=>{
             if(!pause) updateIndex(index+1);
         }, 2500);
+
+        getinputVal(shoppingList, itemToShow);
 
         return () => {
             if(interval){
@@ -96,10 +121,13 @@ function Slider( { showCart, setShowCart, shoppingList, setShoppingList } ){
                     title={products[itemToShow].name}
                     price={products[itemToShow].price}
                     description={products[itemToShow].description}
+                    inputVal={ inputVal }
                     shoppingList={shoppingList}
                     setShoppingList={setShoppingList}
                     showCart={showCart}
                     setShowCart={setShowCart}
+                    updateOrder={updateOrder}
+                    setUpdateOrder={setUpdateOrder}
                 />
             </Modal>
         </div>

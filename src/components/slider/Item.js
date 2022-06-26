@@ -2,12 +2,12 @@ import React from "react";
 import "../../css/Item.css";
 
 function Item({ img, title, price, itemKey, handleClick }){
-/*
-    const showModal = () => {
-        setItemToShow(itemKey);
-        setModalShow();
-    }
-*/
+
+	// numero a formato moneda
+	const toMoney = (number) => {
+		return new Intl.NumberFormat('es-CO').format(number);
+	};
+
     return(
         <div className="slider-img-card-box" onClick={() => { handleClick(itemKey) }}>
             <div className="slider-img-card-box-img">
@@ -17,7 +17,7 @@ function Item({ img, title, price, itemKey, handleClick }){
             <div className="slider-img-card-text">
                 <h4>{title}</h4>
                 <hr />
-                <p>{"$"+price}</p>
+                <p>{"$"+toMoney(price)}</p>
             </div>
         </div>
     );
