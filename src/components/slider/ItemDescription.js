@@ -64,7 +64,7 @@ function ItemDescription({ index, img, title, price, description, inputVal, shop
                 </div>
                 <div className="cardslider-info-form">
                     <h4>Cantidad</h4>
-                    <input className="cardslider-input" type="number" defaultValue={inputVal} onChange={handleChange} />
+                    <input className="cardslider-input" type="number" defaultValue={inputVal} onChange={handleChange} min="1"/>
                     <button className={productAdded ? "btn-addToCart-disabled" : "btn-addToCart"} onClick={addToCart}>{productAdded ? "Producto añadido" : "Añadir al carrito"}</button>
                     <button className="btn-show-cart" onClick={openCart} >Mostrar carrito</button>
                 </div>

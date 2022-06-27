@@ -18,6 +18,8 @@ function App() {
 	const [showCart, setShowCart] = useState( false );
 	// flag - true indica que se debe actualizar los datos de la orden
 	const [updateOrder, setUpdateOrder] = useState( false );
+	// indica si existen productos en la lista o no
+	const [productsInList, setProductsInList] = useState(false);
 
 	const [order, setOrder] = useState( {
 		name: "",
@@ -48,11 +50,14 @@ function App() {
 		let newOrder = order;
 
 		if(shoppingList.length > 0){
-
+			setProductsInList(true);
 			shoppingList.forEach(element => {
 				total = total + parseInt(element.subTotal, 10);
 			});
+		}else{
+			setProductsInList(false);
 		}
+
 		newOrder.total = total + parseInt(newOrder.shipping, 10);
 		setOrder(newOrder);
 		setUpdateOrder(false);
@@ -128,8 +133,8 @@ function App() {
 					</table>
 					<div className="cart-btn-container">
 						<button className="btn-shopping-cart back" onClick={()=>{setShowCart(false)}}>Regresar</button>
-						<button className="btn-shopping-cart delete-list" onClick={()=>{deleteProductList()}}>Vaciar Carrito</button>
-						<button className="btn-shopping-cart buy">Hacer Pedido</button>
+						{ productsInList && <button className="btn-shopping-cart delete-list" onClick={()=>{deleteProductList()}}>Vaciar Carrito</button> }
+						{ productsInList && <button className="btn-shopping-cart buy">Hacer Pedido</button> }
 					</div>
 				</div>
             </Modal>
