@@ -13,18 +13,25 @@ function Slider( { showCart, setShowCart, shoppingList, setShoppingList, updateO
     const [pause, setPause] = useState(false);
     //cantidad de items a mostrar en slider dependiendo el ancho de pantalla
     const [items, setItems] = useState(6);
-    // mostrar ocultar el modal
+    // mostrar ocultar el modal que muestra la descripcion del producto
     const [modal, setModal] = useState(false);
     // item que se mostrará en el modal
     const [itemToShow, setItemToShow] = useState(0);
     // valor del input
     const [inputVal, setInputVal] = useState(1);
+    // producto a mostrar añadido en carrito
+    const [productAdded, setProductAdded] = useState(false);
 
     // se establece el producto a mostrar en el modal y se abre el modal 
     const showModal = (itemNumber) => {
         setItemToShow(itemNumber);
+        getinputVal(shoppingList, itemNumber);
         setModal(true);
-        //console.log("mostrar modal con item N° "+itemNumber);
+    }
+
+    const openCart = () => {
+        setModal(false);
+        setShowCart(true);
     }
 
     // establece la cantidad de items a mostrar en el slider segun el tamaño de la pantalla
@@ -66,13 +73,14 @@ function Slider( { showCart, setShowCart, shoppingList, setShoppingList, updateO
         //item existe en la lista de compras
         if(itemInList){
             val = itemInList.cant;
+            setProductAdded(true);
+        }else{
+            setProductAdded(false);
         }
-        //console.log("el index es : "+index);
-        //console.log("valor del input : "+val);
-        console.log(itemInList);
-        console.log(val);
-        //return (val);
+        
         setInputVal(val);
+        console.log("valor input: "+val);
+        console.log("Producto añadido: "+productAdded);
     };
 
     // ejecuta la animacion del slider cada 2.5 s
@@ -80,8 +88,6 @@ function Slider( { showCart, setShowCart, shoppingList, setShoppingList, updateO
         const interval = setInterval(()=>{
             if(!pause) updateIndex(index+1);
         }, 2500);
-
-        getinputVal(shoppingList, itemToShow);
 
         return () => {
             if(interval){
@@ -124,8 +130,9 @@ function Slider( { showCart, setShowCart, shoppingList, setShoppingList, updateO
                     inputVal={ inputVal }
                     shoppingList={shoppingList}
                     setShoppingList={setShoppingList}
-                    showCart={showCart}
-                    setShowCart={setShowCart}
+                    productAdded={productAdded}
+                    setProductAdded={setProductAdded}
+                    openCart={openCart}
                     updateOrder={updateOrder}
                     setUpdateOrder={setUpdateOrder}
                 />

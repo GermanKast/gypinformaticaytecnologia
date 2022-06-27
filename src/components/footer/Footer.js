@@ -3,6 +3,7 @@ import "../../css/Footer.css";
 import backImg from "../../imgs/footer/carbon.jpg";
 
 function Footer(){
+    
     return(
         <div id="contactData" className="footer-back" style={{backgroundImage: "url("+ backImg +")"}}>
             <div className="footer">
@@ -23,15 +24,15 @@ function Footer(){
                         <div className="social-media">
                             <h3>Nuestras Redes</h3>
                             <div className="social-media-logos">
-                                <img src={require("../../imgs/icons/icon-facebook.png")} alt="GyP en Facebook" />
-                                <img src={require("../../imgs/icons/icon-instagram.png")} alt="GyP en Instagram" />
-                                <img src={require("../../imgs/icons/icon-whatsapp.png")} alt="GyP en otro lado" />
+                                <img src={require("../../imgs/icons/icon-facebook.png")} alt="GyP en Facebook"/>
+                                <img src={require("../../imgs/icons/icon-instagram.png")} alt="GyP en Instagram"/>
+                                <img src={require("../../imgs/icons/icon-whatsapp.png")} alt="GyP en whatsapp"/>
                             </div>
                         </div>
                     </div>
                     <div className="gyp-google-map">
                         <h3>Encuentranos en Google maps</h3>
-                        <div className="frame-google-street"></div>
+                        <a className="frame-google-street" href="https://goo.gl/maps/ZKteWCACDTHvhyFK8" target="_blanck">Ibagué - Tolima - Colombia</a>
                     </div>
                 </div>
                 <div className="legal-mark">

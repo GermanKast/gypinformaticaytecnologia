@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import  "../../css/ItemDescription.css";
 
-function ItemDescription({ index, img, title, price, description, inputVal, shoppingList, setShoppingList, showCart, setShowCart, updateOrder, setUpdateOrder}){
+function ItemDescription({ index, img, title, price, description, inputVal, shoppingList, productAdded, setProductAdded, setShoppingList, openCart, updateOrder, setUpdateOrder}){
 
     const [inputCant, setInputCant] = useState(1);
 
@@ -11,31 +11,35 @@ function ItemDescription({ index, img, title, price, description, inputVal, shop
 
     const addToCart = () => {
 
-        let item = {};
-        const list = shoppingList;
-        const indexItem = list.findIndex( itemList => itemList.index === index );// busca index del elemento en lista
+        if(!productAdded){
+            let item = {};
+            const list = shoppingList;
+            const indexItem = list.findIndex( itemList => itemList.index === index );// busca index del elemento en lista
 
-        if(indexItem >= 0){ // item ya existe en array
-            item = list[indexItem];
-            item.cant = inputCant;
-            item.subTotal = inputCant * item.price;
-            list[indexItem] = item; // reemplazo
-        }else{
-            item = {
-                index: index,
-                cant: inputCant,
-                img: img,
-                prodName: title,
-                price: price,
-                subTotal: price * inputCant
-            };
+            if(indexItem >= 0){ // item ya existe en array
+                item = list[indexItem];
+                item.cant = inputCant;
+                item.subTotal = inputCant * item.price;
+                list[indexItem] = item; // reemplazo
+            }else{
+                item = {
+                    index: index,
+                    cant: inputCant,
+                    img: img,
+                    prodName: title,
+                    price: price,
+                    subTotal: price * inputCant
+                };
 
-            list.push(item); // inserción
+                list.push(item); // inserción
+            }
+
+            setProductAdded(true);
+
+            setShoppingList( list );
+            // se indica que se debe actualizar la orden
+            if(!updateOrder) setUpdateOrder(true);
         }
-
-        setShoppingList( list );
-        // se indica que se debe actualizar la orden
-        if(!updateOrder) setUpdateOrder(true);
     }
 
     // numero a formato moneda
@@ -52,13 +56,17 @@ function ItemDescription({ index, img, title, price, description, inputVal, shop
                 <div className="cardslider-info-text">
                     <h3>{title}</h3>
                     <h4>{"$"+toMoney(price)}</h4>
-                    <p>{description}</p>
+                    {
+                        description.map( (line, i) =>
+                            <p key={"desc-item-"+i} className="description-item-line">{line}</p>
+                        )
+                    }
                 </div>
                 <div className="cardslider-info-form">
                     <h4>Cantidad</h4>
                     <input className="cardslider-input" type="number" defaultValue={inputVal} onChange={handleChange} />
-                    <button className="btn-addToCart" onClick={addToCart} >Añadir al carrito</button>
-                    <button className="btn-showCart">Mostrar carrito</button>
+                    <button className={productAdded ? "btn-addToCart-disabled" : "btn-addToCart"} onClick={addToCart}>{productAdded ? "Producto añadido" : "Añadir al carrito"}</button>
+                    <button className="btn-show-cart" onClick={openCart} >Mostrar carrito</button>
                 </div>
             </div>
         </div>

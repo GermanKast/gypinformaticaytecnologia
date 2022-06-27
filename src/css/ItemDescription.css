@@ -54,8 +54,8 @@
     padding: 7px 0;
 }
 
-.cardslider-info-text > p{
-    padding: 10px 0;
+.description-item-line{
+    padding: 2px 0;
     text-align: justify;
 }
 
@@ -97,15 +97,42 @@
     color: white;
     border: none;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .btn-addToCart:hover{
     background-color: rgb(85, 7, 51);
-    cursor: pointer;
 }
 
 .btn-addToCart:active{
     background-color: rgb(56, 1, 32);
+}
+
+.btn-addToCart-disabled{
+    width: auto;
+    height: 50px;
+    text-align: center;
+    font-size: medium;
+    margin: 10px;
+    padding: 0 15px;
+    background-color: rgb(197, 197, 197);
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: no-drop;
+}
+
+.btn-show-cart{
+    width: auto;
+    height: 30px;
+    text-align: center;
+    font-size: medium;
+    margin: 10px;
+    padding: 0 10px;
+    background-color: rgb(111, 2, 63);
+    color: white;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
 }
 
