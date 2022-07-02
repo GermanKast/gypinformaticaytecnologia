@@ -5,7 +5,7 @@ import ItemDescription from "./ItemDescription.js";
 import Modal from "../modal/Modal.js";
 import products from "../data/products.js";
 
-function Slider( { showCart, setShowCart, shoppingList, setShoppingList, updateOrder, setUpdateOrder } ){
+function Slider(){
 
     // numero de imagenes que se ocultan hacia la izquierda dentro del slider
     const [index, setIndex] = useState(0);
@@ -17,21 +17,11 @@ function Slider( { showCart, setShowCart, shoppingList, setShoppingList, updateO
     const [modal, setModal] = useState(false);
     // item que se mostrará en el modal
     const [itemToShow, setItemToShow] = useState(0);
-    // valor del input
-    const [inputVal, setInputVal] = useState(1);
-    // producto a mostrar añadido en carrito
-    const [productAdded, setProductAdded] = useState(false);
 
     // se establece el producto a mostrar en el modal y se abre el modal 
     const showModal = (itemNumber) => {
         setItemToShow(itemNumber);
-        getinputVal(shoppingList, itemNumber);
         setModal(true);
-    }
-
-    const openCart = () => {
-        setModal(false);
-        setShowCart(true);
     }
 
     // establece la cantidad de items a mostrar en el slider segun el tamaño de la pantalla
@@ -63,24 +53,6 @@ function Slider( { showCart, setShowCart, shoppingList, setShoppingList, updateO
         }
         setIndex(newIndex);
         
-    };
-
-    const getinputVal = (list, index) => {
-    
-        let val = 1;
-        const itemInList = list.find( item => item.index == index );
-        
-        //item existe en la lista de compras
-        if(itemInList){
-            val = itemInList.cant;
-            setProductAdded(true);
-        }else{
-            setProductAdded(false);
-        }
-        
-        setInputVal(val);
-        console.log("valor input: "+val);
-        console.log("Producto añadido: "+productAdded);
     };
 
     // ejecuta la animacion del slider cada 2.5 s
@@ -122,19 +94,11 @@ function Slider( { showCart, setShowCart, shoppingList, setShoppingList, updateO
             </div>
             <Modal modalShow={modal} setModalShow={setModal}>
                 <ItemDescription
-                    index={itemToShow}
                     img={products[itemToShow].img}
                     title={products[itemToShow].name}
                     price={products[itemToShow].price}
                     description={products[itemToShow].description}
-                    inputVal={ inputVal }
-                    shoppingList={shoppingList}
-                    setShoppingList={setShoppingList}
-                    productAdded={productAdded}
-                    setProductAdded={setProductAdded}
-                    openCart={openCart}
-                    updateOrder={updateOrder}
-                    setUpdateOrder={setUpdateOrder}
+                    setModal={setModal}
                 />
             </Modal>
         </div>

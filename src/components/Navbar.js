@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "../css/Navbar.css";
 
-function Navbar( { showCart, setShowCart } ){
+function Navbar(){
 
     const [animateLinks, setAnimatelinks] = useState(false);
 
