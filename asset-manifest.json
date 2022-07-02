@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/gypinformaticaytecnologia/static/css/main.3b165ca7.css",
-    "main.js": "/gypinformaticaytecnologia/static/js/main.39dbdd8f.js",
+    "main.css": "/gypinformaticaytecnologia/static/css/main.6a53eba8.css",
+    "main.js": "/gypinformaticaytecnologia/static/js/main.b618044a.js",
     "static/media/banner-gyp-largo.jpg": "/gypinformaticaytecnologia/static/media/banner-gyp-largo.8e1162e0e6adacfcb006.jpg",
     "static/media/diseño-web-caricatura-fondo-oscuro-short.jpg": "/gypinformaticaytecnologia/static/media/diseño-web-caricatura-fondo-oscuro-short.7d9ae7c9555ec0715df4.jpg",
     "static/media/fondo-gyp-lc.jpg": "/gypinformaticaytecnologia/static/media/fondo-gyp-lc.e963d4406c3c4a9d2331.jpg",
@@ -39,11 +39,11 @@
     "static/media/icon-instagram.png": "/gypinformaticaytecnologia/static/media/icon-instagram.a56bf10aa22b9bc0d748.png",
     "static/media/logo-gyp-short.png": "/gypinformaticaytecnologia/static/media/logo-gyp-short.d0b2b46d7e5480d51f8a.png",
     "index.html": "/gypinformaticaytecnologia/index.html",
-    "main.3b165ca7.css.map": "/gypinformaticaytecnologia/static/css/main.3b165ca7.css.map",
-    "main.39dbdd8f.js.map": "/gypinformaticaytecnologia/static/js/main.39dbdd8f.js.map"
+    "main.6a53eba8.css.map": "/gypinformaticaytecnologia/static/css/main.6a53eba8.css.map",
+    "main.b618044a.js.map": "/gypinformaticaytecnologia/static/js/main.b618044a.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b165ca7.css",
-    "static/js/main.39dbdd8f.js"
+    "static/css/main.6a53eba8.css",
+    "static/js/main.b618044a.js"
   ]
 }
