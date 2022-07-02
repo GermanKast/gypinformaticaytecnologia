@@ -38,7 +38,6 @@ function Navbar( { showCart, setShowCart } ){
                 <a className="link-navbar" href="#serviceList">Servicios</a>
                 <a className="link-navbar" href="#usSection">Nosotros</a>
                 <a className="link-navbar" href="#contactData">Contacto</a>
-                <img onClick={() => {setShowCart(!showCart)}} className="shopping-cart-navbar" src={require("../imgs/icons/shopping-cart-white-64x64.png")} alt="Icono carrito de compras" />
             </div>
             <div className="divider-reverse">
                 <hr className="shine-reverse"/>
